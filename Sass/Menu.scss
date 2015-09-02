@@ -1,0 +1,154 @@
+//------global variables------
+$bg-color : white;
+$header-background : ('../Images/colorful_triangles_small.jpg');
+$menu-transparency : rgba(240,240, 240, 0.5);
+$button-color : lightgrey;
+$button-color-hover : grey;
+
+$default-assignment-bgcolor : MintCream;
+$default-assignment-accentcolor : PaleTurquoise ;
+
+/*-----------------STYLES-------------------*/
+
+/*-----------------RESET--------------------*/
+body, html
+{
+	margin : 0;
+	padding : 0;
+	height: 100%;
+	font-family: sans-serif;
+	background-color: $bg-color;
+}
+
+a, a:visited, a:hover
+{
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/*-----------------SECTIONS------------------*/
+
+.section 
+{
+	padding : 10px 0;
+}
+
+/*-----------------PAGE---------------------*/
+
+#page
+{
+	height: 100%;
+}
+
+/*-----------------BODY---------------------*/
+
+#body
+{
+	padding-bottom: 50px;
+}
+/*-----------------HEADER-------------------*/
+
+#header
+{
+	background-image : url('../Images/colorful_triangles_small.jpg');
+	background-size : cover;
+	padding-bottom: 0;
+
+	ul
+	{
+		width: 95%;
+		list-style-type: none;	
+		padding-left: 5%;
+		margin: 0;
+		background-color: $menu-transparency;
+		left : -5em;
+	
+		li
+		{
+			float: left;
+			padding : 10px;	
+			&:hover
+			{
+				background-color: $menu-transparency;
+			}
+		}
+	}
+}
+
+.clear
+{
+	clear: left;
+	display: block;
+}
+
+.selected, #header ul .selected:hover
+{
+	background-color: #FFF;
+}
+
+/*----------------FOOTER--------------------*/
+
+#footer
+{
+	position : fixed;
+	width: 100%;
+	bottom : 0;
+	box-sizing : border-box;
+	background-color : lightgrey;
+	padding-left: 5%;
+}
+
+@media (max-width : 480px)
+{
+	#footer
+	{
+		position: relative;
+	}
+}
+
+/*----------------OTHER STUFF---------------*/
+
+table
+{
+	background-color:  $default-assignment-bgcolor;	
+	
+	tr 
+	{
+		td
+		{
+			border: 1px solid $default-assignment-accentcolor;
+			padding: 5px 15px;	
+		}	
+		
+		&:first-of-type
+		{
+			font-weight:  600;		
+		}
+	}
+}
+
+.important-list li
+{
+	margin-bottom: 10px;
+}
+
+/*----------------WRAPPER------------------*/
+
+.content-box
+{
+	margin : 10px 5%;
+}
+
+.div_button
+{
+	background-color: $button-color;
+	width: auto;
+	padding: 10px;
+	margin : 20px 0;
+	
+	&:hover
+	{
+		background-color: $button-color-hover;		
+	}
+}

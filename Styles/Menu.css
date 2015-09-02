@@ -1,0 +1,88 @@
+/*-----------------STYLES-------------------*/
+/*-----------------RESET--------------------*/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: white; }
+
+a, a:visited, a:hover {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+/*-----------------SECTIONS------------------*/
+.section {
+  padding: 10px 0; }
+
+/*-----------------PAGE---------------------*/
+#page {
+  height: 100%; }
+
+/*-----------------BODY---------------------*/
+#body {
+  padding-bottom: 50px; }
+
+/*-----------------HEADER-------------------*/
+#header {
+  background-image: url("../Images/colorful_triangles_small.jpg");
+  background-size: cover;
+  padding-bottom: 0; }
+  #header ul {
+    width: 95%;
+    list-style-type: none;
+    padding-left: 5%;
+    margin: 0;
+    background-color: rgba(240, 240, 240, 0.5);
+    left: -5em; }
+    #header ul li {
+      float: left;
+      padding: 10px; }
+      #header ul li:hover {
+        background-color: rgba(240, 240, 240, 0.5); }
+
+.clear {
+  clear: left;
+  display: block; }
+
+.selected, #header ul .selected:hover {
+  background-color: #FFF; }
+
+/*----------------FOOTER--------------------*/
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  background-color: lightgrey;
+  padding-left: 5%; }
+
+@media (max-width: 480px) {
+  #footer {
+    position: relative; } }
+/*----------------OTHER STUFF---------------*/
+table {
+  background-color: MintCream; }
+  table tr td {
+    border: 1px solid PaleTurquoise;
+    padding: 5px 15px; }
+  table tr:first-of-type {
+    font-weight: 600; }
+
+.important-list li {
+  margin-bottom: 10px; }
+
+/*----------------WRAPPER------------------*/
+.content-box {
+  margin: 10px 5%; }
+
+.div_button {
+  background-color: lightgrey;
+  width: auto;
+  padding: 10px;
+  margin: 20px 0; }
+  .div_button:hover {
+    background-color: grey; }
+
+/*# sourceMappingURL=Menu.css.map */
