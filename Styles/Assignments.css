@@ -1,0 +1,13 @@
+/*----------------ASSIGNMENT 1---------------*/
+table {
+  background-color: MintCream; }
+  table tr td {
+    border: 1px solid PaleTurquoise;
+    padding: 5px 15px; }
+  table tr:first-of-type {
+    font-weight: 600; }
+
+.important-list li {
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=Assignments.css.map */

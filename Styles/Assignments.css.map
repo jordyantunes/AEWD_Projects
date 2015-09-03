@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAIA,KACA;EACC,gBAAgB,ECCa,SAAS;EDGrC,WACA;IACC,MAAM,EAAE,uBAAyC;IACjD,OAAO,EAAE,QAAQ;EAGlB,sBACA;IACC,WAAW,EAAG,GAAG;;AAKpB,kBACA;EACC,aAAa,EAAE,IAAI",
+"sources": ["../Sass/Assignments.scss","../Sass/global_definitions.scss"],
+"names": [],
+"file": "Assignments.css"
+}

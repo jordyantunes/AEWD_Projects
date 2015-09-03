@@ -1,0 +1,27 @@
+@import "global_definitions.scss";
+
+/*----------------ASSIGNMENT 1---------------*/
+
+table
+{
+	background-color:  $default-assignment-bgcolor;	
+	
+	tr 
+	{
+		td
+		{
+			border: 1px solid $default-assignment-accentcolor;
+			padding: 5px 15px;	
+		}	
+		
+		&:first-of-type
+		{
+			font-weight:  600;		
+		}
+	}
+}
+
+.important-list li
+{
+	margin-bottom: 10px;
+}

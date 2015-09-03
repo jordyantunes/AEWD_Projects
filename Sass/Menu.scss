@@ -1,12 +1,5 @@
-//------global variables------
-$bg-color : white;
-$header-background : ('../Images/colorful_triangles_small.jpg');
-$menu-transparency : rgba(240,240, 240, 0.5);
-$button-color : lightgrey;
-$button-color-hover : grey;
-
-$default-assignment-bgcolor : MintCream;
-$default-assignment-accentcolor : PaleTurquoise ;
+//@import "compass/css3/transform";
+@import "global_definitions.scss";
 
 /*-----------------STYLES-------------------*/
 
@@ -68,6 +61,7 @@ a, a:visited, a:hover
 		{
 			float: left;
 			padding : 10px;	
+
 			&:hover
 			{
 				background-color: $menu-transparency;
@@ -87,6 +81,63 @@ a, a:visited, a:hover
 	background-color: #FFF;
 }
 
+/*------------SUBMENU STILL IN DEVELOPMENT--------------*/
+
+@keyframes teste
+{
+	0% { transform : scale(1, 0); }
+	100% { transform: scale(1,1);}
+	
+}
+
+
+.parent-menu // Not yet fully implemented
+{
+	position: relative;
+	&:hover 
+	{
+		.submenu_in
+		{
+			display: block;
+			animation-name: teste;
+			animation-duration: 0.3s;
+			transform-origin: 50% 0%;
+		}
+	}
+}
+
+.submenu // Not yet fully implemented
+{
+	display: block;
+	position: relative;
+	margin : 0 0 0 0 !important;	
+	left : 0 !important;
+	background-color : $submenu-color !important;
+}
+
+.submenu_in //not fully implemented
+{
+	display: none;
+	position: absolute;
+	margin : 10px 0 0 0 !important;	
+	left : 0 !important;
+	background-color : $submenu-color !important;
+	box-shadow: 0 3px 3px rgba(200,200,200, 0.8);
+	//max-height: 30vh;
+
+	.column
+	{
+		float: left;
+	}
+	li {
+		float: none !important; 
+		position: relative;
+		background-color : gray;
+	}
+    
+}
+//----------------END SUBMENU---------------*/
+
 /*----------------FOOTER--------------------*/
 
 #footer
@@ -105,32 +156,6 @@ a, a:visited, a:hover
 	{
 		position: relative;
 	}
-}
-
-/*----------------OTHER STUFF---------------*/
-
-table
-{
-	background-color:  $default-assignment-bgcolor;	
-	
-	tr 
-	{
-		td
-		{
-			border: 1px solid $default-assignment-accentcolor;
-			padding: 5px 15px;	
-		}	
-		
-		&:first-of-type
-		{
-			font-weight:  600;		
-		}
-	}
-}
-
-.important-list li
-{
-	margin-bottom: 10px;
 }
 
 /*----------------WRAPPER------------------*/
