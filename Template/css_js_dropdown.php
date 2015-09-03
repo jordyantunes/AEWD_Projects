@@ -8,6 +8,7 @@
 							echo '<a href="'.$base_path.'Assignments/'.$file.'">'.
 								'<li>'.$short_name.'</li></a>';
 						}
+
 						?>
 					</ul>
 				</li>

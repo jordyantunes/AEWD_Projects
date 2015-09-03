@@ -36,7 +36,7 @@
 		
 		$name = $name.$suffix;
 		
-		#create new file
+		#create new PHP file
 		$file = fopen($base_path."Assignments/".$name.".php", 'wr');
 		
 		#get page template
@@ -46,8 +46,20 @@
 		$content = str_replace('Assignment Title', $name, $content);
 		$content = str_replace('This Will Be The Title', $name, $content);
 		
+		#add CSS link
+		#this doesnt look right, though
+		$content = str_replace('//$custom_css_files = array(...);', '$custom_css_files = array("'.$name.'.css");', $content);
+		
 		fwrite($file, $content);
 		fclose($file);
+		
+		#create SCSS file
+		copy($base_path."Template/style_template.scss", $base_path."Sass/".$name.".scss");
+		
+		#create CSS file
+		$file = fopen($base_path."Styles/".$name.".css", 'wr');
+		fclose($file);
+		
 		
 		return array("return_message" => $return_message,
 					"file_name" => $name);
@@ -66,5 +78,30 @@
 		}
 		
 		return $counter;
+	}
+	
+	function insert_css_files()
+	{
+		global $base_path, $custom_css_files;
+		
+		if (isset($custom_css_files))
+		{
+			foreach ($custom_css_files as $file)
+			{
+				echo '<link rel="stylesheet" href="'.$base_path.'Styles/'.$file.'"/>';
+			}	
+		}
+	}
+	
+	//----------TEMPLATING FUNCTIONS-------------
+	
+	function insert_css_internal()
+	{
+		global $base_path, $custom_css_internal;
+		
+		if (isset($custom_css_internal))
+		{
+			echo $custom_css_internal;	
+		}
 	}
 ?>

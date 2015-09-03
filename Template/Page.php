@@ -1,6 +1,9 @@
 		<?php
 			$is_home = false; 
 			$title = "Assignment Title";
+			//$custom_css_files = array(...);
+			//CUSTOM_CSS_ARRAY
+			//$custom_css_internal = String;
 			include_once ('../Template/Header.php'); 
 		?>
 		<div id="body" class="section">

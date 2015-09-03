@@ -20,6 +20,13 @@
 	
 	<link rel="stylesheet" href="<?php echo $base_path;?>Styles/Menu.css"/>
 	<link rel="stylesheet" href="<?php echo $base_path;?>Styles/Assignments.css"/>
+	
+	<!-- INSERT CUSTOM CSS FILES-->
+	<?php insert_css_files(); ?>
+	
+	<!-- INSERT INTERNAL CSS -->
+	<?php insert_css_internal(); ?>
+	
 	<script src="<?php echo $base_path;?>Javascript/jquery-2.1.4.min.js"></script>
 		<style type="text/css">
 		
@@ -28,7 +35,7 @@
 		</style>
 
 </head>
-<body>
+<body <?php echo (isset($body_class))? 'class="'.$body_class.'"' : ''; ?>>
     <div id="page">
 		<div id="header" class="section">
 			<div class="content-box">
