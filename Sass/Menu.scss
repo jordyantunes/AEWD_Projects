@@ -67,6 +67,100 @@ a, a:visited, a:hover
 				background-color: $menu-transparency;
 			}
 		}
+		
+		/*------------SUBMENU STILL IN DEVELOPMENT--------------*/
+		/*------------uncomment the submenu section in Header.php to see current state---------------*/
+
+		@keyframes teste
+		{
+			0% { transform : scale(1, 0); }
+			100% { transform: scale(1,1);}
+			
+		}
+		
+		/*
+		.parent-menu // Not yet fully implemented
+		{
+			position: relative;
+			&:hover 
+			{
+				.submenu_in
+				{
+					display: block;
+					animation-name: teste;
+					animation-duration: 0.3s;
+					transform-origin: 50% 0%;
+				}
+			}
+		}
+		
+		.submenu // Not yet fully implemented
+		{
+			display: block;
+			position: relative;
+			margin : 0 0 0 0;	
+			left : 0;
+			background-color : $submenu-color;
+		}
+		
+		.submenu_in //not fully implemented
+		{
+			display: none;
+			position: absolute;
+			margin : 10px 0 0 0;	
+			padding-left: 0;
+			left : 0;
+			width: auto;
+			background-color : $submenu-color;
+			box-shadow: 0 3px 3px rgba(200,200,200, 0.8);
+			//max-height: 30vh;
+		
+			.column
+			{
+				float: left;
+				border-right: 1px #000;
+				overflow: hidden;
+				&:first-of-type
+				{
+					float: none;
+					overflow: auto;
+				}
+				&:last-of-type
+				{
+					border-right: none;
+				}
+			}
+			li {
+				float: none; 
+				position: relative;
+			}
+			
+		}
+		//----------------END SUBMENU---------------
+		*/
+		
+		.parent_menu
+		{
+			.submenu_in
+			{
+				display: none;
+				width: auto;
+				max-height: 30vh;
+				flex-wrap: wrap;
+				flex-direction: column;
+				position: absolute;
+				transform-origin: 50% 0%;
+				background-color: $submenu-color;
+				padding: 0;
+			}
+			
+			.open
+			{
+				display: inline-flex;
+				animation-name: teste;
+				animation-duration: 0.3s;
+			}
+		}
 	}
 }
 
@@ -80,63 +174,6 @@ a, a:visited, a:hover
 {
 	background-color: #FFF;
 }
-
-/*------------SUBMENU STILL IN DEVELOPMENT--------------*/
-
-@keyframes teste
-{
-	0% { transform : scale(1, 0); }
-	100% { transform: scale(1,1);}
-	
-}
-
-
-.parent-menu // Not yet fully implemented
-{
-	position: relative;
-	&:hover 
-	{
-		.submenu_in
-		{
-			display: block;
-			animation-name: teste;
-			animation-duration: 0.3s;
-			transform-origin: 50% 0%;
-		}
-	}
-}
-
-.submenu // Not yet fully implemented
-{
-	display: block;
-	position: relative;
-	margin : 0 0 0 0 !important;	
-	left : 0 !important;
-	background-color : $submenu-color !important;
-}
-
-.submenu_in //not fully implemented
-{
-	display: none;
-	position: absolute;
-	margin : 10px 0 0 0 !important;	
-	left : 0 !important;
-	background-color : $submenu-color !important;
-	box-shadow: 0 3px 3px rgba(200,200,200, 0.8);
-	//max-height: 30vh;
-
-	.column
-	{
-		float: left;
-	}
-	li {
-		float: none !important; 
-		position: relative;
-		background-color : gray;
-	}
-    
-}
-//----------------END SUBMENU---------------*/
 
 /*----------------FOOTER--------------------*/
 

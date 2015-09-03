@@ -20,6 +20,7 @@
 	
 	<link rel="stylesheet" href="<?php echo $base_path;?>Styles/Menu.css"/>
 	<link rel="stylesheet" href="<?php echo $base_path;?>Styles/Assignments.css"/>
+	<script src="<?php echo $base_path;?>Javascript/jquery-2.1.4.min.js"></script>
 		<style type="text/css">
 		
 			<!-- Local Style Rules go Here -->
@@ -46,44 +47,20 @@
 						> Home </li>
 				</a>
 				
-				<?php /*---not yet fully implemented--- 
 				<?php
-					$assign_count =  count(dir_listing("Assignments"));
-					$items_per_column = 10;
-					$num_columns = ceil ($assign_count / $items_per_column);
-					?>
-				<li class="parent-menu">
-					Assignments
-					<ul class="submenu_in" style="width : <?php echo 100 * $num_columns;?>%">
-						<?php
-							$i = 0;
-							foreach (dir_listing("Assignments") as $file) :
-								// If we've reached the end of a row, close it and start another
-								if(!($i % $items_per_column))
-								{
-									if($i > 0)
-									{
-										echo "</div>"; // Close the column
-									}
-							
-									echo '<div class="column" style="min-width : '. 100 / $num_columns.'%">';
-								}
-								$short_name = str_replace(".php", "", $file);
-								echo '<a href="'.$base_path.'Assignments/'.$file.'">'.
-									'<li '.
-									(($short_name == $title)? 'class="selected"':'').'>'.
-									$short_name.
-									'</li></a>';
-								$i++;
-							endforeach;
-							echo "</div>";
-							echo '<span class="clear"></span>';
-						
-							?>
-					</ul>
-				</li>
-				<!-- testing -->
-				-----*/ ?>
+					//still in development 
+					
+					//CSS-only multi-column dropdown menu
+					//include($base_path."Template/css-dropdown.php");
+					
+					//CSS and Js-only multi-column dropdown menu
+					//include($base_path."Template/css_js_dropdown.php");
+					
+					//still in development
+				?>
+				
+				<!---dropdown--->
+				
 				<?php
 					foreach (dir_listing("Assignments") as $file)
 					{
