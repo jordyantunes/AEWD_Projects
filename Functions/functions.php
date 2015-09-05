@@ -93,6 +93,17 @@
 		}
 	}
 	
+	function delete_project($name)
+	{
+		global $base_path;
+		
+		unlink($base_path.'Assignments/'.$name.'.php');
+		unlink($base_path.'Sass/'.$name.'.scss');
+		unlink($base_path.'Styles/'.$name.'.css');
+		
+		return "Project $name Deleted!";
+	}
+	
 	//----------TEMPLATING FUNCTIONS-------------
 	
 	function insert_css_internal()
@@ -103,5 +114,25 @@
 		{
 			echo $custom_css_internal;	
 		}
+	}
+	
+	function load_language_file($name)
+	{
+		global $base_path;
+		$file = simplexml_load_file($base_path."Languages/".$name);
+		return $file;
+	}
+	
+	function check_language()
+	{
+		if (isset($_COOKIE['language']))
+		{
+			load_language_file($_COOKIE['language']);
+		}
+		else
+		{
+			
+		}
+		
 	}
 ?>

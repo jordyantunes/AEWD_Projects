@@ -71,7 +71,7 @@ a, a:visited, a:hover
 		/*------------SUBMENU STILL IN DEVELOPMENT--------------*/
 		/*------------uncomment the submenu section in Header.php to see current state---------------*/
 
-		@keyframes teste
+		@keyframes dropdown
 		{
 			0% { transform : scale(1, 0); }
 			100% { transform: scale(1,1);}
@@ -87,7 +87,7 @@ a, a:visited, a:hover
 				.submenu_in
 				{
 					display: block;
-					animation-name: teste;
+					animation-name: dropdown;
 					animation-duration: 0.3s;
 					transform-origin: 50% 0%;
 				}
@@ -157,12 +157,13 @@ a, a:visited, a:hover
 			.open
 			{
 				display: inline-flex;
-				animation-name: teste;
+				animation-name: dropdown;
 				animation-duration: 0.3s;
 			}
 		}
 	}
 }
+
 
 .clear
 {
@@ -174,6 +175,7 @@ a, a:visited, a:hover
 {
 	background-color: #FFF;
 }
+
 
 /*----------------FOOTER--------------------*/
 
@@ -212,5 +214,96 @@ a, a:visited, a:hover
 	&:hover
 	{
 		background-color: $button-color-hover;		
+	}
+}
+
+
+/*---------------HOME PAGE---------------*/
+
+.left-box
+{
+	width: 70%;
+	padding : 0 5% 0 0;
+	float: left;
+}
+
+.right-box
+{
+	width : 15%;
+	padding : 0 0 0 5%;
+	height: 100%;
+	float: left;
+	position: relative;
+  
+	&:after
+	{
+		content : '';
+		position: absolute;
+		left : 0%;
+		//height : 75%;
+		//top: 12%;
+		
+		height : 100%;
+		top : 0%;
+		
+		border-left : 1px solid rgba(70,70,70, 0.6);
+	}
+	
+  	.settings-list
+	{
+		list-style: none;
+		padding: 0 5px 5px 5px;
+		
+		p
+		{
+			margin-bottom: 0;	
+		}
+		
+		li
+		{
+			font-size: 1.1rem;
+		}
+		
+		span 
+		{
+			font-weight: 600;
+		}
+	}
+	
+	.option-list
+	{
+		list-style: none;
+		padding-left : 0;
+		padding-top: 5px;
+		
+		li
+		{
+			font-size: 0.8em;
+			padding : 5px 0;
+			
+			&:hover
+			{
+				background-color : $menu-transparency;
+			}
+			
+			input[type=submit]
+			{
+				width: 100%;
+			}
+		}
+	}
+	
+	.dropdown
+	{
+		display: block;
+		animation-name: dropdown;
+		-webkit-animation-name: dropdown;
+		-moz-animation-name: dropdown;
+		animation-duration: 0.3s;
+		-webkit-animation-duration: 0.3s;
+		-moz-animation-duration: 0.3s;
+		transform-origin: 50% 0%;
+		-webkit-transform-origin: 50% 0%;
+		-moz-transform-origin: 50% 0%;
 	}
 }

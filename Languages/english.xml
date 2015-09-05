@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<pages>
+	<Home>
+		<title>
+			Welcome to the assignments page!
+		</title>
+		<important>
+			<item>
+				Tap on any of the links in the menu, they will take you to the respective assignment.
+			</item>
+			<item>
+				The menu is automatically updated as new assignments are included in the assignment folder, so you only have to worry about doing the assignment.
+			</item>
+			<item>
+				Creating this page was actually part of <span style="font-weight : 600;">Assignment 1</span> !
+			</item>
+			<item>
+				There is a template file in the Template folder for future assignments that have the same structure, copy it, use it and modify it to suit your needs.
+			</item>
+			<item>
+				OR...
+			</item>
+		</important>
+		
+		<creating_info>
+			<title>
+				You could simply write the name of the project in the box below and its file will be created for you!
+			</title>
+			<sentence>
+				Yes, it's that easy.
+			</sentence>
+		</creating_info>
+	</Home>
+</pages>

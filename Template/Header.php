@@ -28,12 +28,13 @@
 	<?php insert_css_internal(); ?>
 	
 	<script src="<?php echo $base_path;?>Javascript/jquery-2.1.4.min.js"></script>
-		<style type="text/css">
-		
-			<!-- Local Style Rules go Here -->
+	<style type="text/css">
+	
+		<!-- Local Style Rules go Here -->
 
-		</style>
+	</style>
 
+	<?php $data = load_language_file("portuguese.xml")->{$title}; ?>
 </head>
 <body <?php echo (isset($body_class))? 'class="'.$body_class.'"' : ''; ?>>
     <div id="page">
@@ -89,4 +90,4 @@
 				<span class="clear"></span>
 			</ul>
 			-->
-</div>
+	</div>

@@ -4,39 +4,61 @@
 			include_once ('Template/Header.php'); ?>
 		<div id="body" class="section">
 			<div class="content-box">
-				<h2>
-					Welcome to the assignments page!
-				</h2>
+				<div class="left-box">
+					<h2>
+						<?php echo $data->title; ?>
+					</h2>
+						
+					<ul class="important-list">
+						<?php 
+							foreach($data->important->item as $item)
+							{
+								echo "<li>$item</li>";
+							}
+						?>
+					</ul>
+					<h3>
+						<?php echo $data->creating_info->title; ?>
+					</h3>
+					<p>
+						<?php echo $data->creating_info->sentence; ?>
+					</p>
+					<div>
+						<form method="post" action="Functions/create_project.php">
+							<input type="text" name="project_name" />
+							<input type="submit" name="submit" value="Create Project"/>
+						</form>
+					</div>
 					
-				<ul class="important-list">
-					<li>
-						Tap on any of the links in the menu, they will take you to the respective assignment.
-					</li>
-					<li>
-						The menu is automatically updated as new assignments are included in the assignment folder, so you only have to worry about doing the assignment.
-					</li>
-					<li>
-						Creating this page was actually part of <span style="font-weight : 600;">Assignment 1</span> !
-					</li>
-					<li>
-						There is a template file in the Template folder for future assignments that have the same structure, copy it, use it and modify it to suit your needs.
-					</li>	
-					<li> OR...</li>
-				</ul>
-				<h3>
-					You could simply write the name of the project in the box below and its file will be created for you!
-				</h3>
-				<p>
-					Yes, it's that easy.
-				</p>
-				<div>
-					<form method="post" action="Functions/create_project.php">
-						<input type="text" name="project_name" />
-						<input type="submit" name="submit" value="Create Project"/>
-					</form>
+				</div>
+				<div class="right-box">
+					<ul class="settings-list">
+						<li class="settings-button"  data-status="closed">
+							<span>Delete Projects</span>
+							<p>
+								You can also delete projects here so you don't need to find and manually delete every project file :
+							</p>
+							<ul class="option-list">
+								<form method="post" action="<?php echo $base_path;?>Functions/delete_project.php">
+								<?php 
+									$items = dir_listing("Assignments");
+									foreach ($items as $item)
+									{
+										$name = str_replace(".php", "", $item);
+										echo '<li><input type="checkbox" name="project[]" value="'.$name.'">'.$name.'</input></li>';
+									}
+								?>
+									<li>
+										<input type="submit" name="submit" value="Delete Projects"></input>
+									</li>
+								</form>
+							</ul>
+						</li>
 				</div>
 					
 			</div>
 		</div>
+		
+		<script src="<?php echo $base_path;?>Javascript/settings.js"></script>
 		<?php 
 			include_once ('Template/Footer.php'); ?>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<pages>
+	<Home>
+		<title>
+			Bem-vindo à página de atividades!
+		</title>
+		<important>
+			<item>
+				Pressione qualquer dos links no menu, eles te levaram à atividade correspondente.
+			</item>
+			<item>
+				O menu é automaticamente atualizado quando novas atividades são incluídas da pasta Assignment, então você só precisa se preocupar em fazer a atividade.
+			</item>
+			<item>
+				Criar essa página foi, na verdade, parte do <span style="font-weight : 600;">Assignment 1</span>! 
+			</item>
+			<item>
+				Há um arquivo de template na pasta Template para atividades futuras que tenham a mesma estrutura, copie, use e o modifique. 
+			</item>
+			<item>
+				Ou...
+			</item>
+		</important>
+		
+		<creating_info>
+			<title>
+				Você pode simplesmente escrever o nome do projeto na campo abaixo e seus arquivos serão criados para você!
+			</title>
+			<sentence>
+				Sim, é fácil assim.
+			</sentence>
+		</creating_info>
+	</Home>
+</pages>
