@@ -127,12 +127,12 @@
 	{
 		if (isset($_COOKIE['language']))
 		{
-			load_language_file($_COOKIE['language']);
+			return load_language_file($_COOKIE['language'].'.xml');
 		}
 		else
 		{
-			
+			setcookie("language","english", time() + 3600, "/");
+			return load_language_file("english.xml");
 		}
-		
 	}
 ?>

@@ -5,6 +5,8 @@
 	
 	$function_path = $base_path . 'Functions/functions.php'; 
 	include ($function_path);
+	
+	$data = check_language()->{$title};
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -34,7 +36,6 @@
 
 	</style>
 
-	<?php $data = load_language_file("portuguese.xml")->{$title}; ?>
 </head>
 <body <?php echo (isset($body_class))? 'class="'.$body_class.'"' : ''; ?>>
     <div id="page">

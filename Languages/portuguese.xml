@@ -6,13 +6,13 @@
 		</title>
 		<important>
 			<item>
-				Pressione qualquer dos links no menu, eles te levaram à atividade correspondente.
+				Pressione qualquer dos links no menu, eles te levarão à atividade correspondente.
 			</item>
 			<item>
 				O menu é automaticamente atualizado quando novas atividades são incluídas da pasta Assignment, então você só precisa se preocupar em fazer a atividade.
 			</item>
 			<item>
-				Criar essa página foi, na verdade, parte do <span style="font-weight : 600;">Assignment 1</span>! 
+				Criar essa página foi, na verdade, parte do &lt;span style=&quot;font-weight : 600&quot;&gt;Assignment 1&lt;/span&gt;! 
 			</item>
 			<item>
 				Há um arquivo de template na pasta Template para atividades futuras que tenham a mesma estrutura, copie, use e o modifique. 
@@ -29,6 +29,17 @@
 			<sentence>
 				Sim, é fácil assim.
 			</sentence>
+			<button>Criar Projeto</button>
 		</creating_info>
+		
+		<deleting_info>
+			<title>
+				Excluir Projetos
+			</title>
+			<sentence>
+				Você também pode excluir projetos aqui, assim você não precisa achar e excluir cada arquivo do projeto : 
+			</sentence>
+			<button>Excluir Projetos</button>
+		</deleting_info>
 	</Home>
 </pages>

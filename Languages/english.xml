@@ -12,7 +12,7 @@
 				The menu is automatically updated as new assignments are included in the assignment folder, so you only have to worry about doing the assignment.
 			</item>
 			<item>
-				Creating this page was actually part of <span style="font-weight : 600;">Assignment 1</span> !
+				Creating this page was actually part of &lt;span style=&quot;font-weight : 600&quot;&gt;Assignment 1&lt;/span&gt; !
 			</item>
 			<item>
 				There is a template file in the Template folder for future assignments that have the same structure, copy it, use it and modify it to suit your needs.
@@ -29,6 +29,18 @@
 			<sentence>
 				Yes, it's that easy.
 			</sentence>
+			<button>Create Project</button>
 		</creating_info>
+		
+		<deleting_info>
+			<title>
+				Delete Projects
+			</title>
+			<sentence>
+				You can also delete projects here so you don't need to find and manually delete every project file : 
+			</sentence>
+			<button>Delete Projects</button>
+		</deleting_info>
 	</Home>
+	
 </pages>

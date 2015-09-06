@@ -26,7 +26,7 @@
 					<div>
 						<form method="post" action="Functions/create_project.php">
 							<input type="text" name="project_name" />
-							<input type="submit" name="submit" value="Create Project"/>
+							<input type="submit" name="submit" value="<?php echo $data->creating_info->button;?>"/>
 						</form>
 					</div>
 					
@@ -34,9 +34,9 @@
 				<div class="right-box">
 					<ul class="settings-list">
 						<li class="settings-button"  data-status="closed">
-							<span>Delete Projects</span>
+							<span><?php echo $data->deleting_info->title; ?></span>
 							<p>
-								You can also delete projects here so you don't need to find and manually delete every project file :
+								<?php echo $data->deleting_info->sentence; ?>
 							</p>
 							<ul class="option-list">
 								<form method="post" action="<?php echo $base_path;?>Functions/delete_project.php">
@@ -49,7 +49,7 @@
 									}
 								?>
 									<li>
-										<input type="submit" name="submit" value="Delete Projects"></input>
+										<input type="submit" name="submit" value="<?php echo $data->deleting_info->button;?>"></input>
 									</li>
 								</form>
 							</ul>
