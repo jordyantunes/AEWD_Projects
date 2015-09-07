@@ -20,7 +20,7 @@
 			}
 			else if ($time >= 22 && $time < 24)
 			{
-				$body_class = "nightowl";
+				$body_class = "night-owl";
 				$message = "Hey Night Owl!";
 			}
 		?>
