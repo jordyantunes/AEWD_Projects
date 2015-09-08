@@ -307,3 +307,23 @@ a, a:visited, a:hover
 		-moz-transform-origin: 50% 0%;
 	}
 }
+
+//portrait mode smartphones 
+@media only screen and (max-width : 480px) and (orientation : portrait)
+{
+	.right-box, .left-box
+	{
+		width: 100%;
+		float: none;
+	}
+}
+
+//landscape mode smartphones
+@media only screen and (max-width : 640px) and (orientation : landscape)
+{
+	.right-box, .left-box
+	{
+		width: 100%;
+		float: none;
+	}
+}
