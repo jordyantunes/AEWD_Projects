@@ -23,17 +23,18 @@ So this is basically a PHP framework that I'll be using in my Advanced Enterpris
 - Multi-language support. To add support for a new language, add a language file in XML to the Languages folder. Follow the this structure :
 ```XML
 <Pages>
-	<Your_Page_Name>
-		<Your_Page_Content1>
+	<Page_Name>
+		<Page_Title>
 			This is your content
-		</Your_Page_Content1>
-	</Your_Page_Name>
+		</Page_Title>
+	</Page_Name>
 </Pages> 	  
 ```
  - To display the contents make sure the language is selected as default and follow the example :
- ```PHP
- <p>
- 	<?php echo $data->Your_Page_Name->Your_Page_Content; ?>
+ 
+ ```php
+<p>
+ 	<?php echo $data->Page_Name->Page_Title; ?>
 </p>
 ```
 	 
