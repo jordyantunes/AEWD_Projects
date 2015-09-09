@@ -1,0 +1,78 @@
+.color-red span {
+  color: red; }
+
+.color-blue span {
+  color: blue; }
+
+.color-green span {
+  color: green; }
+
+.color-yellow span {
+  color: yellow; }
+
+.color-orange span {
+  color: orange; }
+
+.color-black span {
+  color: black; }
+
+.bgcolor-red {
+  background-color: red; }
+
+.bgcolor-blue {
+  background-color: blue; }
+
+.bgcolor-green {
+  background-color: green; }
+
+.bgcolor-yellow {
+  background-color: yellow; }
+
+.bgcolor-orange {
+  background-color: orange; }
+
+.bgcolor-black {
+  background-color: black; }
+
+.fontsize-10 span {
+  font-size: 1em; }
+
+.fontsize-11 span {
+  font-size: 1.1em; }
+
+.fontsize-12 span {
+  font-size: 1.2em; }
+
+.fontsize-13 span {
+  font-size: 1.3em; }
+
+.fontsize-14 span {
+  font-size: 1.4em; }
+
+.fontsize-15 span {
+  font-size: 1.5em; }
+
+.fontsize-16 span {
+  font-size: 1.6em; }
+
+span {
+  display: block;
+  margin: 20px 0; }
+
+.font-impact span {
+  font-family: Impact, Charcoal, sans-serif; }
+
+.font-palatino span {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+
+.font-tahoma span {
+  font-family: Tahoma, Geneva, sans-serif; }
+
+.font-gothic span {
+  font-family: Century Gothic, sans-serif; }
+
+.font-lucida span {
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
+
+.font-arial-black span {
+  font-family: 'Arial Black', Gadget, sans-serif; }

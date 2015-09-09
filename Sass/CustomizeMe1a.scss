@@ -1,0 +1,53 @@
+@import "global_definitions.scss";
+
+$color-list : red, blue, green, yellow, orange, black;
+
+@each $color in $color-list
+{
+	.color-#{$color} span { color : #{$color};}
+}
+
+@each $color in $color-list
+{
+	.bgcolor-#{$color} { background-color : #{$color};}
+}
+
+@for $i from 10 through 16
+{
+	.fontsize-#{$i} span { font-size: #{$i / 10}em; }
+}
+
+span {
+	display: block;
+	margin: 20px 0;
+}
+
+.font-impact span
+{
+	font-family : Impact, Charcoal, sans-serif;
+} 
+
+.font-palatino span
+{
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.font-tahoma span
+{
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.font-gothic span
+{
+	font-family: Century Gothic, sans-serif;
+}
+
+.font-lucida span
+{
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+.font-arial-black span
+{
+	font-family: 'Arial Black', Gadget, sans-serif;
+}
