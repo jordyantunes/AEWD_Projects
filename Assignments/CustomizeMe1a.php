@@ -34,44 +34,52 @@
 				</h2>
 				<span> This is a very special sentence. It will change its color, font size  and other stuff you choose in the form below.</span>
 				<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+					<?php $colors = array("red", "blue", "green", "yellow", "orange", "black"); ?>
+						
 					<label>Font Color : </label>
 					<select name="fontcolor">
-						<option value="red">Red</option>
-						<option value="blue">Blue</option>
-						<option value="green">Green</option>
-						<option value="yellow">Yellow</option>
-						<option value="orange">Orange</option>
-						<option value="black">Black</option> 
+						<?php
+							foreach ($colors as $color)
+							{
+								echo '<option value="'.$color.'" '. ((isset($_POST["fontcolor"]))? (($_POST["fontcolor"] == $color)? 'selected' : '') : '') .'>'.$color.'</option>';
+							}
+							?>
 					</select>
 					
 					<label>Background Color : </label>
 					<select name="bgcolor">
-						<option value="red">Red</option>
-						<option value="blue">Blue</option>
-						<option value="green">Green</option>
-						<option value="yellow">Yellow</option>
-						<option value="orange">Orange</option>
-						<option value="black">Black</option> 
+						<?php
+							foreach ($colors as $color)
+							{
+								echo '<option value="'.$color.'" '. ((isset($_POST["bgcolor"]))? (($_POST["bgcolor"] == $color)? 'selected' : '') : '') .'>'.$color.'</option>';
+							}
+						?> 
 					</select>
 					
+					<?php
+						$fonts = array("impact", "palatino", "tahoma", "gothic", "lucida", "arial-black");
+					?>
 					<label>Font : </label>
 					<select name="fontfamily">
-						<option value="impact">Impact</option>
-						<option value="palatino">Palatino</option>
-						<option value="tahoma">Tahoma</option>
-						<option value="gothic">Gothic</option>
-						<option value="lucida">Lucida</option>
-						<option value="arial-black">Arial Black</option> 
+						<?php
+							foreach ($fonts as $font)
+							{
+								echo '<option value="'.$font.'" '. ((isset($_POST["fontfamily"]))? (($_POST["fontfamily"] == $font)? 'selected' : '') : '') .'>'.$font.'</option>';
+							}
+						?>
 					</select>
 					
+					<?php
+						$fontsize = array(10, 11, 12, 13, 14, 15);
+					?>
 					<label>Font Size : </label>
 					<select name="fontsize">
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-						<option value="13">13</option>
-						<option value="14">14</option>
-						<option value="15">15</option> 
+						<?php
+							foreach ($fontsize as $size)
+							{
+								echo '<option value="'.$size.'" '. ((isset($_POST["fontsize"]))? (($_POST["fontsize"] == $size)? 'selected' : '') : '') .'>'.$size.'</option>';
+							}
+						?>
 					</select>
 						
 					<input type="submit" name="submit" value="Submit"/>
