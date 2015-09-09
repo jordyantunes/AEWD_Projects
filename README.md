@@ -19,3 +19,21 @@ So this is basically a PHP framework that I'll be using in my Advanced Enterpris
 - Some useful functions are available for you, they can help you with things like getting an array of all the files in a folder or checking if a file already exists.
 - Some global variables are defined in the environment, they are very useful if you want to have a better control over your assignments' look or behavior.
       
+### Other Features :
+- Multi-language support. To add support for a new language, add a language file in XML to the Languages folder. Follow the this structure :
+```XML
+<Pages>
+	<Your_Page_Name>
+		<Your_Page_Content1>
+			This is your content
+		</Your_Page_Content1>
+	</Your_Page_Name>
+</Pages> 	  
+```
+ - To display the contents make sure the language is selected as default and follow the example :
+ ```PHP
+ <p>
+ 	<?php echo $data->Your_Page_Name->Your_Page_Content; ?>
+</p>
+```
+	 
