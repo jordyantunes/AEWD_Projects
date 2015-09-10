@@ -3,6 +3,7 @@
 			$title = "Assignment Title";
 			//$custom_css_files = array(...);
 			//$custom_css_internal = String;
+			//$body_class = ...
 			include_once ('../Template/Header.php'); 
 		?>
 		<div id="body" class="section">

@@ -19,3 +19,33 @@ So this is basically a PHP framework that I'll be using in my Advanced Enterpris
 - Some useful functions are available for you, they can help you with things like getting an array of all the files in a folder or checking if a file already exists.
 - Some global variables are defined in the environment, they are very useful if you want to have a better control over your assignments' look or behavior.
       
+### Other Features :
+- Multi-language support. To add support for a new language, add a language file in XML to the Languages folder. Follow the this structure :
+
+```XML
+<Pages>
+	<Page_Name>
+		<Page_Title>
+			This is your content
+		</Page_Title>
+	</Page_Name>
+</Pages> 	  
+```
+ - To display the contents make sure the language is selected as default and follow the example :
+ 
+ ```php
+<h1>
+ 	<?php echo $data->Page_Name->Page_Title; ?>
+</h1>
+```
+### Global Variables :
+
+As mentioned above, there are a few global variables that you may want to use to customize a page or include files. Here is a list of them:
+
+ - `$is_home` > `boolean` - if set to true, indicates that the page is on the root directory (i.e. not in Assignments or Functions folder).
+ - `$base_path` > `String` - based on `$is_home` variable. Is either "../" or "./" . Use it at the beginning of paths when you need to include or load any file.
+ - `$title` > `string` - title of the page
+ - `$custom_css_files` > `String Array` - this variable is automatically created and set when you create a new project in the Home page. It contains all the custom CSS files that a page may use.
+ - `$custom_css_internal` > `String` - write all the internal CSS your page will have. You probably won't need to use this one. 
+ - `$data` - `Object` > This one stores all the text in the Languages folder for that specific page.
+ - `$body_class` - `String` > if you need to add class definitions to your `<body>` tag in HTML, just write them to this variable.
