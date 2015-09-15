@@ -38,6 +38,7 @@ So this is basically a PHP framework that I'll be using in my Advanced Enterpris
  	<?php echo $data->Page_Name->Page_Title; ?>
 </h1>
 ```
+
 ### Global Variables :
 
 As mentioned above, there are a few global variables that you may want to use to customize a page or include files. Here is a list of them:
