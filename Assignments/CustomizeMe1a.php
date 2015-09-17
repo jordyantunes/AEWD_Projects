@@ -2,7 +2,8 @@
 					
 		if (isset($_POST['submit']))
 		{
-			if (isset($_POST["fontcolor"]) && !empty($_POST["fontcolor"])
+			if ($_POST["submit"] == "Submit" 
+				&& isset($_POST["fontcolor"]) && !empty($_POST["fontcolor"])
 				&& isset($_POST["bgcolor"]) && !empty($_POST["bgcolor"])
 				&& isset($_POST["fontfamily"]) && !empty($_POST["fontfamily"])
 				&& isset($_POST["fontsize"]) && !empty($_POST["fontsize"]))
@@ -36,53 +37,61 @@
 				<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
 					<?php $colors = array("red", "blue", "green", "yellow", "orange", "black"); ?>
 						
-					<label>Font Color : </label>
-					<select name="fontcolor">
-						<?php
-							foreach ($colors as $color)
-							{
-								echo '<option value="'.$color.'" '. ((isset($_POST["fontcolor"]))? (($_POST["fontcolor"] == $color)? 'selected' : '') : '') .'>'.$color.'</option>';
-							}
-							?>
-					</select>
-					
-					<label>Background Color : </label>
-					<select name="bgcolor">
-						<?php
-							foreach ($colors as $color)
-							{
-								echo '<option value="'.$color.'" '. ((isset($_POST["bgcolor"]))? (($_POST["bgcolor"] == $color)? 'selected' : '') : '') .'>'.$color.'</option>';
-							}
-						?> 
-					</select>
-					
+					<div>
+						<label>Font Color : </label>
+						<select name="fontcolor">
+							<?php
+								foreach ($colors as $color)
+								{
+									echo '<option value="'.$color.'" '. ((isset($_POST["fontcolor"]))? (($_POST["fontcolor"] == $color)? 'selected' : '') : '') .'>'.$color.'</option>';
+								}
+								?>
+						</select>
+					</div>
+					<div>
+						<label>Background Color : </label>
+						<select name="bgcolor">
+							<?php
+								foreach ($colors as $color)
+								{
+									echo '<option value="'.$color.'" '. ((isset($_POST["bgcolor"]))? (($_POST["bgcolor"] == $color)? 'selected' : '') : '') .'>'.$color.'</option>';
+								}
+							?> 
+						</select>
+					</div>
 					<?php
 						$fonts = array("impact", "palatino", "tahoma", "gothic", "lucida", "arial-black");
 					?>
-					<label>Font : </label>
-					<select name="fontfamily">
-						<?php
-							foreach ($fonts as $font)
-							{
-								echo '<option value="'.$font.'" '. ((isset($_POST["fontfamily"]))? (($_POST["fontfamily"] == $font)? 'selected' : '') : '') .'>'.$font.'</option>';
-							}
-						?>
-					</select>
-					
+						<div>
+						<label>Font : </label>
+						<select name="fontfamily">
+							<?php
+								foreach ($fonts as $font)
+								{
+									echo '<option value="'.$font.'" '. ((isset($_POST["fontfamily"]))? (($_POST["fontfamily"] == $font)? 'selected' : '') : '') .'>'.$font.'</option>';
+								}
+							?>
+						</select>
+					</div>
 					<?php
 						$fontsize = array(10, 11, 12, 13, 14, 15);
 					?>
-					<label>Font Size : </label>
-					<select name="fontsize">
-						<?php
-							foreach ($fontsize as $size)
-							{
-								echo '<option value="'.$size.'" '. ((isset($_POST["fontsize"]))? (($_POST["fontsize"] == $size)? 'selected' : '') : '') .'>'.$size.'</option>';
-							}
-						?>
-					</select>
-						
-					<input type="submit" name="submit" value="Submit"/>
+					<div>
+						<label>Font Size : </label>
+						<select name="fontsize">
+							<?php
+								foreach ($fontsize as $size)
+								{
+									echo '<option value="'.$size.'" '. ((isset($_POST["fontsize"]))? (($_POST["fontsize"] == $size)? 'selected' : '') : '') .'>'.$size.'em</option>';
+								}
+							?>
+						</select>
+					</div>
+					<div>		
+						<br>
+						<input type="submit" name="submit" value="Submit"/>
+						<input type="submit" name="submit" value="Reset"/>
+					</div>
 				</form>
 			</div>
 		</div>
